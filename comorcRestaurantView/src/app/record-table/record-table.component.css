@@ -1,0 +1,31 @@
+.backgroundDiv{
+    background-color:#1a2548;
+    width:100%;
+    height:100%;
+    position: fixed;
+    left:0px;
+    top:0px;
+}
+
+.accountTable{
+    background-color:#ADD8E6;
+    position: fixed;
+    width: 90%;
+    left: 2.5%;
+    top: 7%;
+    outline-color: black;
+    outline-style: ridge;
+    outline-width: 1%;
+}
+
+#grey{
+    background-color:rgb(211, 211, 211);
+}
+
+.topDiv{
+    position: fixed;
+    width: 90%;
+    height:5%;
+    left: 2.5%;
+    top: 1%;
+}

@@ -1,0 +1,134 @@
+.backgroundDiv{
+    background-color:#1a2548;
+    width:100%;
+    height:100%;
+    position: fixed;
+    left:0px;
+    top:0px;
+}
+
+.centerDiv{
+    background-color:#0f7d9c;
+    position: fixed;
+    width: 70%;
+    height: 89.5%;
+    left: 2.5%;
+    top: 3%;
+    outline-color: black;
+    outline-style: ridge;
+    outline-width: 1%;
+}
+
+.sideDiv{
+    background-color:#0f7d9c;
+    position: fixed;
+    width: 25%;
+    height: 89.5%;
+    left: 72.5%;
+    top: 3%;
+    outline-color: black;
+    outline-style: ridge;
+    outline-width: 1%;
+}
+
+.buttonDiv{
+    position: fixed;
+    left: 2.4%;
+    top: 93.5%;
+    width:30% !important;
+    height:fit-content;
+}
+
+#submit{
+    margin-right:1%;
+}
+
+.outerList{
+    width:90%;
+    height:10%;
+    margin:2.5%;
+    font:20;
+}
+
+.innerList{
+    width:28%;
+    height:100%;
+    margin:0px;
+    margin-left:5%;
+    display:inline-block;
+    background-color:grey;
+    align-content: center;
+}
+
+#leftItemName{
+    height:50%;
+    margin:25%;
+    margin-block-end: 0%;
+    text-align:center;
+}
+
+.topSideDiv{
+    width:80%;
+    margin:0px;
+    margin-left:10%;
+    margin-top:5%;
+    height:65%;
+}
+
+.sideTotalDiv{
+    width:80%;
+    height:5%;
+    margin:0%;
+    margin-left:10%;
+    margin-top:5%;
+}
+
+#rightItemInfo{
+    text-align:left;
+    margin:0 !important;
+    margin-right:0;
+    width:50%;
+    float:left;
+}
+
+#rightItemPrice{
+    text-align:right;
+    margin:0 !important;
+    margin-right:0;
+    width:50%;
+    float:right;
+}
+
+.plusMinus{
+    float:right;
+    margin-right:1%;
+}
+
+#leftItemInfo{
+    margin-top:10%;
+    margin-left:1%;
+}
+
+.bottomSideDiv{
+    width:80%;
+    margin:0%;
+    margin-left:10%;
+    margin-top:5%;
+    height:10%;
+    align-content:center;
+}
+
+.sideButtons{
+    margin-left:6.66%;
+    width:30%;
+}
+
+#bottomSideParagraph{
+    text-align: center;
+    align-self: center;
+    width:100%;
+}
+
+.header{
+    text-align: center;
+}

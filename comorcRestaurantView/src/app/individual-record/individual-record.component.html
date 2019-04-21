@@ -1,0 +1,50 @@
+<div class="backgroundDiv">
+    <div class="topDiv doNotPrint">
+        <button mat-raised-button id="grey"(click)="back()">Back</button>
+    </div>
+    <div class="bottomDiv">
+      <div class="metadataDiv">
+        <p>Invoice Id : {{invoiceId}} <button mat-raised-button class="doNotPrint" id="printButton" (click)="printStart()">Print</button></p>      
+        <p>Account Name : {{accountName}}</p>
+        <p>Account Address : {{accountAddress}}</p>
+        <p>Order Date/Time : {{creationTime}}</p>
+      </div>
+
+      <mat-table class="itemTable" [dataSource]="itemSource" *ngIf="getDone">
+        <ng-container  matColumnDef="Item Name">
+        <mat-header-cell *matHeaderCellDef>Item Name</mat-header-cell>
+        <mat-cell *matCellDef="let item">  
+          <span>{{item.name}}</span>
+        </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="Unit Cost">
+        <mat-header-cell *matHeaderCellDef>Unit Cost</mat-header-cell>
+        <mat-cell *matCellDef="let item">  
+          $<span>{{item.pricePerUnit.toFixed(2)}}</span>
+        </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="Number">
+        <mat-header-cell *matHeaderCellDef>Number</mat-header-cell>
+        <mat-cell *matCellDef="let item">
+          <span>{{item.numberOfItems}}</span>
+        </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="Volume Cost">
+        <mat-header-cell *matHeaderCellDef>Volume Cost</mat-header-cell>
+        <mat-cell *matCellDef="let item">
+          $<span>{{item.priceForGroup.toFixed(2)}}</span>
+        </mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="keys"></mat-header-row>
+        <mat-row *matRowDef="let myRowData; columns: keys;"></mat-row>
+      </mat-table>
+      <div class="totalCostDiv">
+        <p>Total Cost: ${{totalCost.toFixed(2)}}</p>
+      </div>
+    </div>
+    
+</div>

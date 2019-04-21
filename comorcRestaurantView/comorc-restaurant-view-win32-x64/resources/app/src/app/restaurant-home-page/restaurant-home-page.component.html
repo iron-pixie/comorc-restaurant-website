@@ -1,0 +1,34 @@
+<div class="backgroundDiv">
+  <div class="centerDiv">
+    <div class="outerList" *ngFor="let items of leftSideItemList">
+      <div class="innerList" *ngFor="let item of items">
+        <p id="leftItemInfo">{{item.name}}
+          <button class="plusMinus" (click)="minusItem(item)">-</button>
+          <button class="plusMinus" (click)="addItem(item)">+</button>  
+          ${{item.pricePerUnit.toFixed(2)}}       
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="sideDiv">
+    <div class="topSideDiv">
+      <div *ngFor="let item of rightSideItemList.getList()">
+        <p id ="rightItemInfo" >{{item.name}}: {{item.numberOfItems}} {{item.unit}}</p>
+        <p id ="rightItemPrice" >${{item.priceForGroup.toFixed(2)}}</p>
+        <br><br>
+      </div>
+    </div>
+    <div class="sideTotalDiv">
+      <p id ="rightItemInfo">Total:</p>
+      <p id ="rightItemPrice">{{total.toFixed(2)}}</p>
+    </div>
+    <div class="bottomSideDiv">
+      <button mat-raised-button class="sideButtons" (click)="submitList()">Submit</button>
+      <button mat-raised-button class="sideButtons" (click)="clearList()">Clear List</button>
+      <p id="bottomSideParagraph" *ngIf="submitted">Your order has been submitted</p>
+    </div>
+  </div>
+  <div class="buttonDiv">
+    <button mat-raised-button id="view">View Records</button>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="backgroundDiv">
+    <div class="topDiv">
+        <button mat-raised-button id="grey"(click)="back()">Back</button>
+    </div>
+    <mat-table class="accountTable" [dataSource]="orderSource" *ngIf="getDone">
+        <ng-container  matColumnDef="Invoice Id">
+            <mat-header-cell *matHeaderCellDef>Invoice Id</mat-header-cell>
+            <mat-cell *matCellDef="let order">  
+            <span>{{order.invoiceId}}</span>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="Cost">
+        <mat-header-cell *matHeaderCellDef>Cost</mat-header-cell>
+        <mat-cell *matCellDef="let order">  
+            $<span>{{order.cost}}</span>
+        </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="Creation Time">
+        <mat-header-cell *matHeaderCellDef>Creation Time</mat-header-cell>
+        <mat-cell *matCellDef="let order">
+            <span>{{order.creationTime}}</span>
+        </mat-cell>
+        </ng-container>
+
+        <ng-container  matColumnDef="View">
+        <mat-header-cell *matHeaderCellDef>View</mat-header-cell>
+        <mat-cell *matCellDef="let order">  
+            <button id="grey" mat-raised-button (click)="viewRow(order)">View</button>
+        </mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="keysPlus"></mat-header-row>
+        <mat-row *matRowDef="let myRowData; columns: keysPlus;"></mat-row>
+    </mat-table>
+</div>

@@ -1,0 +1,25 @@
+.backgroundDiv{
+    background-color:#1a2548;
+    width:100%;
+    height:100%;
+    position: fixed;
+    left:0px;
+    top:0px;
+}
+
+.topTopLevelDiv{
+    background-color:#ADD8E6;
+    position: fixed;
+    width: 30%;
+    height:50%;
+    left: 2.5%;
+    top: 7%;
+    outline-color: black;
+    outline-style: ridge;
+    outline-width: 1%;
+}
+.topLevelDiv{
+    margin-top:5%;
+    margin-left:20%;
+    width:50%;
+}
